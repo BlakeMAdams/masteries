@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 
 import Header from './Header';
 import Footer from './Footer';
-import { getProducts } from '../ducks/reducer';
+import { getProducts, cartNum } from '../ducks/reducer';
 
 import '../css/products.css';
 
@@ -36,7 +36,9 @@ class Products extends Component {
 		this.setState({
 			cart: tempCart
 		})
+		this.props.cartNum(this.state.cart.length)
 	}
+	
 
 
 	filterCategory(e) {
@@ -109,4 +111,5 @@ function mapStateToProps(state) {
 		products: state.products
 	}
 }
-export default connect(mapStateToProps, { getProducts })(Products)
+
+export default connect(mapStateToProps, { getProducts, cartNum })(Products)

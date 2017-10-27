@@ -2,12 +2,14 @@ import axios from 'axios';
 
 // default state
 const initialState = {
-    products: []
+    products: [],
+    cartNum: 0
 };
 
 
 // Actions
 const GET_PRODUCTS = 'GET_PRODUCTS';
+const CART_NUM = 'CART_NUM';
 
 
 // Action Creators
@@ -21,6 +23,13 @@ const GET_PRODUCTS = 'GET_PRODUCTS';
      }
  };
 
+ export function cartNum(num) {
+    return {
+        type: CART_NUM,
+        payload: num
+    }
+};
+
 
 // Reducer
 export default (state = initialState, action) => {
@@ -28,6 +37,9 @@ export default (state = initialState, action) => {
 
         case GET_PRODUCTS + '_FULFILLED':
             return Object.assign({}, state, { products: action.payload });
+
+        case CART_NUM:
+            return Object.assign({}, state, { cartNum: action.payload });
 
        
         default: return state;
