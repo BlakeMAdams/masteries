@@ -1,14 +1,19 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+import logo from '../logo.svg'
+
 export default function Header() {
 	return (
-		<section className="header">
-			<div className="site-title-box">
-				<h1>Products E-Site</h1>
-				<p>We have what you want.</p>
-			</div>
+		<header className="header">
+			<section className="site-title-container">
+				<div className="site-title-box">
+					<h1 id="site-title">Products E-Site</h1>
+					<p>We have what you want.</p>
+				</div>
 
+				<img className="site-logo" src={logo} alt="Products E-Site Logo" />
+			</section>
 
 			<nav>
 				<ul>
@@ -19,7 +24,9 @@ export default function Header() {
 				</ul>
 			</nav>
 
-		</section>
+			<div className="cart-float">My Cart</div>
+
+		</header>
 
 	)
 }
