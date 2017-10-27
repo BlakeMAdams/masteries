@@ -24,7 +24,7 @@ export default function Header() {
 				</ul>
 			</nav>
 
-			<div className="cart-float">My Cart</div>
+			
 
 		</header>
 
