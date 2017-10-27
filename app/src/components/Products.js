@@ -130,3 +130,5 @@ function mapStateToProps(state) {
 }
 
 export default connect(mapStateToProps, { getProducts, cartNum })(Products)
+
+/* react component lifecycle */
