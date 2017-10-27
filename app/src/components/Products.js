@@ -1,12 +1,32 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 
 import Header from './Header';
 import Footer from './Footer';
+import { getProducts } from '../ducks/reducer';
 
 import logo from '../logo.svg';
 import '../App.css';
 
-export default class Products extends Component {
+class Products extends Component {
+
+	constructor(props) {
+		super(props);
+
+		this.state = {
+			products: []
+		}
+
+	}
+	componentDidMount() {
+		this.props.getProducts().then( res => this.setState({
+			products: res.value
+		}, () => console.log('state products', this.state.products))
+		)
+	}
+
+
+
 	render() {
 		return (
 			<div className="products">
@@ -20,3 +40,9 @@ export default class Products extends Component {
 		)
 	}
 }
+function mapStateToProps(state) {
+	return {
+		products: state.products
+	}
+}
+export default connect(mapStateToProps, { getProducts})(Products)

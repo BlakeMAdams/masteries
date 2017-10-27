@@ -14,8 +14,8 @@ h4 {
 
 div,
 span,
-p,
-li {
+p
+ {
     font-family: 'Open Sans', Arial, Helvetica, sans-serif;
     color: #353636;
 }
@@ -32,7 +32,8 @@ li {
 
 #site-title {
     font-size: 34px;
-    margin: 0; text-shadow: 2px 2px #8cbeb2;
+    margin: 0; 
+    text-shadow: 2px 2px #8cbeb2;
 }
 
 .header nav {
@@ -61,7 +62,7 @@ nav a {
 
 nav a:hover {
     border-bottom: 3px solid #992B2B;
-    color: #8CBEB2;
+    color: #353636;
 }
 
 nav a:active,
@@ -74,7 +75,8 @@ nav a:focus {
 /* FOOTER */
 
 footer {
-   text-align: center; background: linear-gradient(#555,#222); padding: 40px 20px;
+   text-align: center; 
+   background: linear-gradient(#555,#222); padding: 40px 20px;
 } footer h1, footer p { color: #fff; }
 
 
