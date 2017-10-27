@@ -22,6 +22,10 @@
 .product-block:nth-child(odd){
 	background-color: #f2ebbf;
 }
+.product-subblock {
+	display: flex;
+	justify-content: space-between;
+}
 .item-btn {
 	background-color: #992b2b;
 	color: #fff;
@@ -36,7 +40,15 @@
 	background-color: #8cbeb2;
 	color: #992b2b;
 }
-
+.products-header {
+	width: 100%;
+	display: flex;
+	justify-content: space-around;
+}
+.product-image {
+	width: 100%;
+	height: auto;
+}
 @media (max-width: 799px) {
 	.product-block {
 		width: 33%;

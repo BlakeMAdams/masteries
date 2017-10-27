@@ -22,7 +22,7 @@ class Header extends Component {
 					<ul>
 						<Link to="/"><li>Home</li></Link>
 						<Link to="/products"><li>Products</li></Link>
-						<Link to="/cart"><li>Cart{(this.props.cartNum > 0) && ` ${this.props.cartNum}`}</li></Link>
+		<Link to="/cart"><li>Cart{(this.props.cartNum > 0) && <div className="cartnum-outline">{this.props.cartNum}</div>}</li></Link>
 						<Link to="/about"><li>About</li></Link>
 					</ul>
 				</nav>
