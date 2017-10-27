@@ -15,8 +15,9 @@ class App extends Component {
           <title>Mastery Challenge</title>
           <meta id="meta-description" name="description" content="This is the assessment project for DevMtn Mastery" />
           <meta name="keywords" content="HTML,CSS,XML,JavaScript" />
-            <meta name="author" content="Blake Adams"/>
-              <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+          <meta name="author" content="Blake Adams"/>
+          <meta name="mediatype" content="desktop" />
+          <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
           </head>
               {/* </MetaTags> */}
               {router}
