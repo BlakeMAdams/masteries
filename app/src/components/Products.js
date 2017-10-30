@@ -27,6 +27,10 @@ class Products extends Component {
 			products: res.value
 		}, () => console.log('state products', this.state.products))
 		)
+		
+		this.setState({
+			filter: this.props.match.params.type
+		})
 
 	}
 

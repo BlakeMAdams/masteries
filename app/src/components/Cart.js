@@ -1,8 +1,4 @@
-import React, { Component } from 'react';
-
-import Header from './Header';
-import Footer from './Footer';
-
+import React from 'react';
 
 export default function Cart({ num, total }) {
 
@@ -12,7 +8,6 @@ export default function Cart({ num, total }) {
 				<h1>Cart</h1>
 				<p>Amount of Items: {num}</p>
 				<p>Total: ${total}</p>
-			
 			
 		</div>
 	)

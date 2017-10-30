@@ -16,6 +16,13 @@
 	background-color: #f7f7f7;
 	
 }
+.product-block > p {
+	padding: 10px;
+}
+.product-block span {
+	font-size: 24px;
+	color: #333;
+}
 .product-block:last-child(){
 	margin-right: 0;
 }
