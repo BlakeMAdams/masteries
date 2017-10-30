@@ -34,7 +34,7 @@ app.post('/api/addItem', (req,res,next) =>{
 app.put('/api/updateItem', (req,res,next) =>{
 	console.log('updating item to masterycart')
 	const db = app.get('db');
-	db.updateItem([id, quantity])
+	db.updateItem([req.body.id, req.body.quantity])
 		.then(() => res.status(200))
 });
 app.delete('/api/deleteItem/:id', (req,res,next) =>{
