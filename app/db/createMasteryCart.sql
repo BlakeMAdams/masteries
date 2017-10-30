@@ -1,5 +1,6 @@
 create table masterycart (
 	id serial primary key,
+    item_id integer,
     name text,
     category text,
     price integer NOT NULL

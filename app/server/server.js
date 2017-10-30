@@ -20,19 +20,27 @@ app.get('/api/getProducts', (req,res) =>{
 	const db = app.get('db');
 	db.importProducts().then( (products)=> res.status(200).send(products))
 });
-app.post('/api/postProduct', (req,res,next) =>{
+app.get('/api/getCart', (req,res) =>{
 	const db = app.get('db');
-	db.addProduct([id, name, type])
+	db.importCart().then( (products)=> res.status(200).send(products))
+});
+app.post('/api/addItem', (req,res,next) =>{
+	console.log('adding item to masterycart', req.body)
+	const db = app.get('db');
+	
+	db.addItem([req.body.item_id, req.body.name, req.body.category, req.body.price])
 		.then(() => res.status(200))
 });
-app.update('/api/updateProduct', (req,res,next) =>{
+app.put('/api/updateItem', (req,res,next) =>{
+	console.log('updating item to masterycart')
 	const db = app.get('db');
-	db.updateProduct([id, name, type])
+	db.updateItem([id, quantity])
 		.then(() => res.status(200))
 });
-app.delete('/api/deleteProduct', (req,res,next) =>{
+app.delete('/api/deleteItem/:id', (req,res,next) =>{
+	console.log('deleting item to masterycart')
 	const db = app.get('db');
-	db.deleteProduct([id])
+	db.deleteItem([req.params.id])
 		.then(() => res.status(200))
 });
 

@@ -9,7 +9,7 @@ import About from './components/About';
 export default (
     <Switch>
         <Route exact path='/' component={Home}/>
-		<Route path='/products/:type' component={Products}/>
+		<Route path='/products/:type' component={Products} />
 		<Route path='/products' component={Products}/>
 		<Route path='/cart' component={Cart}/>
 		<Route path='/about' component={About}/>

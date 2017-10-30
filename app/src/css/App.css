@@ -121,6 +121,9 @@ body {
     animation: logo-flip infinite 3s linear;
     height: 80px;
 }
+input:disabled {
+    background: red;
+}
 
 @keyframes logo-flip {
     from {

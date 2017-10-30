@@ -56,15 +56,22 @@
 	width: 100%;
 	height: auto;
 }
-@media (max-width: 799px) {
+@media screen and (max-width: 799px) {
 	.product-block {
 		width: 33%;
 		align-items: center;
     }
 }
 
-@media (max-width: 426px) {
+@media screen and (max-width: 426px) {
     .product-block {
         width: 100%;
     }
+}
+@media print {
+	body {	
+	font-family: arial, sans-serif !important;
+	color: #000 !important;
+	background-color: #fff !important;
+	}
 }
